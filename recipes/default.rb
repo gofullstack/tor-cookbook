@@ -26,8 +26,8 @@ package value_for_platform(
 
 template '/etc/privoxy/config' do
   source 'privoxy_config.erb'
-  owner 'root'
-  group 'root'
+  owner 'privoxy'
+  group 'privoxy'
   mode '0600'
   notifies :restart, 'service[privoxy]'
 end
